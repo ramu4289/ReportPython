@@ -1,0 +1,41 @@
+total = 0
+menu = ""
+print("Report Types include All Items ('A') or Total Only ('T')")
+while True:
+    report_input = input("Enter Report 'A' or 'T': ")
+    if report_input.lower() == "a":
+        break
+    elif report_input.lower() == "t":
+        break
+    else:
+        print(report_input, "invalid, Try Again")
+def adding_report(report):
+    if report.lower() == "a":
+        print("\nItems")
+        print(menu)
+        print("Total", total)
+    elif report.lower() == "t":
+        print("\nTotal", total)
+    else:
+        print("invalid")
+while True:
+    menu = input("Enter an integer or Exit 'Q': ")
+    if menu.isdigit():
+        if report_input.lower() == "a":
+            items = items + menu + "\n"
+            total = total + int(menu)
+        elif report_input.lower() == "t":
+            items = items + menu + "\n"
+            total = total + int(menu)
+    elif menu.startwith("Q"):
+        if report_input.lower() == "a":
+            adding_report(report_input)
+        elif report_input.lower() == "t":
+            adding_report(report_input)
+        break
+    elif menu == "":
+        pass
+    else:
+        print(menu, "Invalid")
+         
+       
